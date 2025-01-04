@@ -1,0 +1,352 @@
+body{
+
+  font-family: 'Cinzel Decorative', cursive;
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  a {
+    color: var(--text-color);
+  }
+  
+  button, .btn {
+    background-color: var(--button-background-color);
+    color: var(--button-text-color);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover, .btn:hover {
+    background-color: var(--button-background-color);
+  }
+
+/* dark mode*/
+.switch {
+  align-self: flex-end;
+  margin: 0.9375rem;
+}
+.inner-switch {
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid #555;
+  border-radius: 1.25rem;
+  width: 3.125rem;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.1875rem;
+  margin-left: 0.3125rem;
+}
+
+.dark, .dark * {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  border-color: var(--border-color);
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+.cursor, .cursor2 {
+  background-color: var(--cursor-color);
+}
+
+
+/* #Cursor
+================================================== */
+:root { --background-color: #ffffff;
+  --text-color: #000000;
+  --border-color: #555555;
+  --button-background-color: #f0f0f0;
+  --button-text-color: #000000;
+  --cursor-color: black; /* Default cursor color */
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {--background-color: #222222;
+    --text-color: #ffff00; /* Yellow text color */
+    --border-color: #e6e6e6;
+    --button-background-color: #333333;
+    --button-text-color: #ffff00;
+      --cursor-color: white; /* Cursor color in dark mode */
+  }
+}
+
+.cursor, .cursor2 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--cursor-color);
+  pointer-events: none;
+  transition: background-color 0.3s ease;
+}
+
+/* Additional styles for cursor2 if needed */
+.cursor2 {
+  width: 20px;
+  height: 20px;
+  background-color: var(--cursor-color);
+}
+.cursor,
+.cursor2,
+.cursor3{
+position: fixed;
+border-radius: 50%;
+transform: translateX(-50%) translateY(-50%);
+pointer-events: none;
+left: -100px;
+top: 50%;
+mix-blend-mode: difference;
+-webkit-transition: all 300ms linear;
+transition: all 300ms linear;
+}
+.cursor{
+background-color: #ffffff;
+height: 10px;
+width: 10px;
+z-index: 99999;
+}
+.cursor2,.cursor3{
+height: 36px;
+width: 36px;
+z-index:99998;
+-webkit-transition:all 0.3s ease-out;
+transition:all 0.3s ease-out
+}
+.cursor2.hover,
+.cursor3.hover{
+-webkit-transform:scale(2) translateX(-25%) translateY(-25%);
+transform:scale(2) translateX(-25%) translateY(-25%);
+border:none
+}
+.cursor2{
+border: 2px solid #fff;
+box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+}
+.cursor2.hover{
+background: rgba(82, 62, 62, 0.555);
+box-shadow: 0 0 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Footer Styles */
+footer {
+  position: relative;
+  z-index: 2; /* Ensure this is higher than the moving image's z-index */
+  background: linear-gradient(to right, gray, white);
+  padding: 20px;
+  text-align: center;
+}
+
+.footer--logo img {
+  border-radius: 50%;
+  width: 100px; 
+  height: 100px; 
+  object-fit: cover;
+  vertical-align: middle; /* Align icons vertically in the middle */
+    margin-left: 10px; /* Add some space between icons */
+
+}
+.footer__container-1 {
+  background-position: 0% 100%;
+  background-size: center;
+  font-size: 3rem; 
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
+  padding:  1rem;
+  text-align: center;
+  text-align: center;
+  color: black;
+  position: relative;
+  width: 100%;
+  bottom: 0;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+.footer__container-1 p {
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: 700;
+  display: inline-block; /* Ensure the p elements are inline */
+  margin: 0; /* Remove default margin */
+}
+
+.footer__container-2 {
+  position: relative;
+  margin-top: 3rem;
+  padding: 2rem;
+  text-align: center;
+  color: black; /* Ensure text color is readable */
+  width: 100%;
+  bottom: 0;
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+.footer__container-2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('icons/connet\ logo\ at.svg'); /* Replace with the correct path to your image */
+  background-size: cover; /* Ensure the image covers the entire container */
+  background-position: center; /* Center the image */
+  opacity: 0.1; /* Set the opacity to be very transparent */
+  z-index: -1; /* Ensure the background image is behind the content */
+}
+
+.footer__container-2 h4 {
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: 700;
+}
+.footer__container-1 p {
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: 700; 
+
+}
+.footer__container-2--socials {
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: 700; 
+  max-width: 30%;
+}
+
+  .socials ul {
+      display: flex;
+      justify-content: center; 
+      gap: 15px; 
+      list-style: none;
+      padding: 0;
+  }
+  
+  .socials a {
+      color: inherit; 
+      text-decoration: none;
+      margin: 0 10px; 
+  }
+  
+  .socials i {
+      transition: transform 0.2s; 
+  }
+  
+  .socials a:hover i {
+      transform: scale(1.2); 
+      color:blue;
+  }
+body{
+  font-family: 'Cinzel Decorative', cursive;
+  }
+
+    .moving-image {
+      background: url('services/digital\ banking.svg') repeat fixed;
+      background-size: cover;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -2;
+      height: 100%;
+      width:100%;
+      opacity: 0.4;
+  
+  }
+  .container {
+    position: relative;
+    z-index: 1; /* Ensure this is higher than the moving image */
+    padding: 20px;
+    color: var(--text-color);
+}
+
+.container__heading {
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.container__box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.box {position: relative;
+  padding: 20px;
+  color: var(--text-color);
+  text-align: center;
+  overflow: hidden;
+  z-index: 0;
+  background-image: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 40px); /* Adjust the width as needed */
+    max-width: calc(33.333% - 40px); /* Adjust the width as needed */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.box h3 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.box p {
+    margin-bottom: 20px;
+}
+
+.box .btn {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.box .btn:hover {
+    background-color: #0056b3;
+}
+.box::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+@keyframes fadeOutDown {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+.box h3 {
+  opacity: 0; /* Start with hidden elements */
+  animation: fadeInUp 5s ease forwards; /* Apply the animation */
+}
