@@ -1,64 +1,40 @@
-/* Default styles for all devices */
-body {
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.container {
-  padding: 10px;
-}
-
-.box {
-  flex: 1 1 100%; /* Full width for small devices */
-  max-width: 100%;
-  padding: 1.25rem;
-  color: var(--text-color);
-  text-align: center;
-  overflow: hidden;
-  z-index: 0;
-  background-image: none;
-  border-radius: 0.625rem;
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.box:hover {
-  transform: translateY(-0.625rem);
-  box-shadow: 0 0.5rem 1.0rem rgba(0, 0, 0, 0.2);
-}
-
-.box h3 {
-  font-family: 'Cinzel Decorative', cursive;
-  font-weight: 700;
-  margin-bottom: 0.625rem;
-}
 
 /* For small devices (phones, 600px and down) */
-@media (max-width: 600px) {
+@media screen and (max-width: 680px) {
   body {
-    font-size: 14px;
-  }
+    font-size: 0.625rem;
 
   .container {
-    padding: 10px;
+    padding: 0.625rem ;
+  }
+  button, .btn {
+  
+    border: 0.03125rem solid var(--border-color);
+    border-radius: 0.15625rem;
+    padding: 0.3125rem 0.625rem;
+
+  }
+  
+  .container__heading {
+    font-size: 0.625rem;
+    margin-bottom: 0.625rem;
   }
 
   .box {
     flex: 1 1 100%; /* Full width for small devices */
     max-width: 100%;
+    padding: 0.625rem;
   }
 
   .footer__container-1 p {
-    font-size: 0.75rem; /* Reduce font size for small devices */
+    font-size: 0.625rem; /* Reduce font size for small devices */
   }
 }
 
 /* For tablets in portrait mode and larger devices (600px and up) */
-@media (min-width: 600px) {
+@media only screen and (min-width: 680px) {
   body {
-    font-size: 18px;
+    font-size:  2rem;
   }
 
   .container {
@@ -76,7 +52,7 @@ body {
 }
 
 /* For desktop and larger devices (1024px and up) */
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
   body {
     font-size: 20px;
   }
@@ -94,7 +70,25 @@ body {
     font-size: 1.25rem; /* Adjust font size for desktops */
   }
 }
+/* body */
+body{
+  font-family: 'Cinzel Decorative', cursive;
+  }
 
+    .moving-image {
+      background: url('services/digital\ banking.svg') repeat fixed;
+      background-size: cover;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -2;
+      height: 100%;
+      width:100%;
+      opacity: 0.4;
+  
+  }
 /* Footer Styles */
 footer {
   position: relative;
@@ -164,6 +158,16 @@ footer {
 .footer__container-2 h4 {
   font-family: 'Cinzel Decorative', cursive;
   font-weight: 700;
+}
+footer__container-1 p {
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: 700; 
+
+}
+.footer__container-2--socials {
+  font-family: 'Cinzel Decorative', cursive;
+  font-weight: 700; 
+  max-width: 30%;
 }
 body{
 
@@ -296,86 +300,7 @@ background: rgba(82, 62, 62, 0.555);
 box-shadow: 0 0 0 rgba(255, 255, 255, 0.2);
 }
 
-/* Footer Styles */
-footer {
-  position: relative;
-  z-index: 2; /* Ensure this is higher than the moving image's z-index */
-  background: linear-gradient(to right, gray, rgba(51, 48, 37, 0.986));
-  padding: 1.25rem;
-  text-align: center;
-}
 
-.footer--logo img {
-  border-radius: 50%;
-  width: 6.25rem; 
-  height: 6.25rem; 
-  object-fit: cover;
-  vertical-align: middle; /* Align icons vertically in the middle */
-    margin-left: 0.625rem; /* Add some space between icons */
-
-}
-.footer__container-1 {
-  background-position: 0% 100%;
-  background-size: center;
-  font-size: 1rem; 
-  flex-direction: column;
-  align-items: center;
-  margin-top: 1rem;
-  padding:  1rem;
-  text-align: center;
-  text-align: center;
-  color: black;
-  position: relative;
-  width: 100%;
-  bottom: 0;
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
-.footer__container-1 p {
-  font-family: 'Cinzel Decorative', cursive;
-  font-weight: 700;
-  display: inline-block; /* Ensure the p elements are inline */
-  margin: 0; /* Remove default margin */
-}
-
-.footer__container-2 {
-  position:relative;
-  margin-top: 1.5rem;
-  padding: 1rem;
-  text-align: center;
-  color: black; /* Ensure text color is readable */
-  width: 100%;
-  bottom: 0;
-  transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-.footer__container-2::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: fit-content;
-  background-image: url('icons/connet\ logo\ at.svg'); /* Replace with the correct path to your image */
-  background-size: cover; /* Ensure the image covers the entire container */
-  background-position: center; /* Center the image */
-  opacity: 0.1; /* Set the opacity to be very transparent */
-}
-
-.footer__container-2 h4 {
-  font-family: 'Cinzel Decorative', cursive;
-  font-weight: 700;
-}
-.footer__container-1 p {
-  font-family: 'Cinzel Decorative', cursive;
-  font-weight: 700; 
-
-}
-.footer__container-2--socials {
-  font-family: 'Cinzel Decorative', cursive;
-  font-weight: 700; 
-  max-width: 30%;
-}
 
   .socials ul {
       display: flex;
@@ -399,24 +324,7 @@ footer {
       transform: scale(1.2); 
       color:blue;
   }
-body{
-  font-family: 'Cinzel Decorative', cursive;
-  }
 
-    .moving-image {
-      background: url('services/digital\ banking.svg') repeat fixed;
-      background-size: cover;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: -2;
-      height: 100%;
-      width:100%;
-      opacity: 0.4;
-  
-  }
   .container {
     position: relative;
     z-index: 1; /* Ensure this is higher than the moving image */
