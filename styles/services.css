@@ -300,7 +300,7 @@ box-shadow: 0 0 0 rgba(255, 255, 255, 0.2);
 footer {
   position: relative;
   z-index: 2; /* Ensure this is higher than the moving image's z-index */
-  background: linear-gradient(to right, gray, black);
+  background: linear-gradient(to right, gray, rgba(51, 48, 37, 0.986));
   padding: 1.25rem;
   text-align: center;
 }
