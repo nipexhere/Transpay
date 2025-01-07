@@ -5,6 +5,16 @@ body{
     font-family: 'Cinzel Decorative', cursive;
       background-color: var(--background-color);
       color: var(--text-color);
+      
+}
+h3{
+  color: blanchedalmond;
+}
+h1{
+  color: aqua;
+}
+p{
+  color: blanchedalmond;
 }
 .moving-image {
   background: url('services/digital\ banking.svg') repeat fixed;
@@ -39,17 +49,25 @@ body{
       background-color: var(--button-background-color);
     }
   
-
+    img.circle{
+      width: 100px; 
+      height: 100px; 
+      border-radius: 50%; /* Make the image a circle */
+      object-fit: cover; /* Ensure the image covers the entire area */
+    }
     
 /* Footer Styles */
 footer {
   position: relative;
   z-index: 2; /* Ensure this is higher than the moving image's z-index */
-  background: linear-gradient(to right, gray, black);
-  padding: 1.25rem;
+  background: radial-gradient( yellow, black);
+padding-top:1.25rem;
+color: #222222;
   text-align: center;
 }
-
+.footer__container-1--header{
+  color: black;
+}
 .footer--logo img {
   border-radius: 50%;
   width: 6.25rem; 
@@ -88,25 +106,32 @@ footer {
   color: black; /* Ensure text color is readable */
   width: 100%;
   height: 100%;
-  margin: 0;
   padding: 0;
-  background-size: cover;
+  padding-bottom: 1.25rem;
+  background-size: cover; /* Ensure the image covers the entire container */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .footer__container-2::before {
   content: "";
   position: absolute;
-  padding: 2rem;
   z-index: -1;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 100%; /* Ensure the image covers the entire viewport height */
-  background-image: url('icons/connet\ logo\ at.svg'); /* Replace with the correct path to your image */
+  height: 100%; /* Ensure the image covers the entire container */
+  background-image: ; /* Replace with the correct path to your image */
   background-size: cover; /* Ensure the image covers the entire container */
   background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Center the image */
   opacity: 0.1; /* Set the opacity to be very transparent */
 }
 
+.container-2 p {
+   color: black;
+}
 .footer__container-2 h4 {
   font-family: 'Cinzel Decorative', cursive;
   font-weight: 700;
@@ -114,6 +139,7 @@ footer {
 footer__container-1 p {
   font-family: 'Cinzel Decorative', cursive;
   font-weight: 700; 
+  color: black;
 
 }
 .footer__container-2--socials {
@@ -151,15 +177,6 @@ footer__container-1 p {
 
 /* #Cursor
 ================================================== */
-:root { --background-color: #ffffff;
-  --text-color: #000000;
-  --border-color: #555555;
-  --button-background-color: #f0f0f0;
-  --button-text-color: #000000;
-  --cursor-color: black; /* Default cursor color */
-}
-
-@media (prefers-color-scheme: dark) {
   :root {--background-color: #222222;
     --text-color: #ffff00; /* Yellow text color */
     --border-color: #e6e6e6;
@@ -167,7 +184,7 @@ footer__container-1 p {
     --button-text-color: #ffff00;
       --cursor-color: white; /* Cursor color in dark mode */
   }
-}
+
 
 .cursor, .cursor2 {
   position: absolute;
@@ -301,17 +318,18 @@ box-shadow: 0 0 0 rgba(255, 255, 255, 0.2);
 }
 
 .box .btn {
-    background-color: #007bff;
+    background-color: black;
     border: none;
     border-radius: 0.3125rem;
-    color: white;
+    color: whitesmoke;
     padding: 0.625rem 1.25rem;
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 .box .btn:hover {
-    background-color: #0056b3;
+    background-color: aqua;
+    color: #222222;
 }
 .box::before {
     content: "";
