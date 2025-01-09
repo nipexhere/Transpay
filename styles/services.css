@@ -1,4 +1,5 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Rubik+Vinyl&display=swap');
 /* body */
 body{
 
@@ -52,8 +53,8 @@ p{
     img.circle{
       width: 100px; 
       height: 100px; 
-      border-radius: 50%; /* Make the image a circle */
-      object-fit: cover; /* Ensure the image covers the entire area */
+      border-radius: 50%; 
+      object-fit: cover;
     }
     
 /* Footer Styles */
@@ -73,8 +74,8 @@ color: #222222;
   width: 6.25rem; 
   height: 6.25rem; 
   object-fit: cover;
-  vertical-align: middle; /* Align icons vertically in the middle */
-  margin-left: 0.625rem; /* Add some space between icons */
+  vertical-align: middle; 
+  margin-left: 0.625rem; 
 }
 
 .footer__container-1 {
@@ -96,21 +97,21 @@ color: #222222;
 .footer__container-1 p {
   font-family: 'Cinzel Decorative', cursive;
   font-weight: 700;
-  display: inline-block; /* Ensure the p elements are inline */
-  margin: 0; /* Remove default margin */
+  display: inline-block;
+  margin: 0; 
 }
 
 .footer__container-2 {
   position: relative;
   text-align: center;
-  color: black; /* Ensure text color is readable */
+  color: black; 
   width: 100%;
   height: 100%;
   padding: 0;
   padding-bottom: 1.25rem;
-  background-size: cover; /* Ensure the image covers the entire container */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Prevent the image from repeating */
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
   transition: background-color 0.5s ease, color 0.5s ease;
 }
 
@@ -121,12 +122,12 @@ color: #222222;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Ensure the image covers the entire container */
-  background-image: ; /* Replace with the correct path to your image */
-  background-size: cover; /* Ensure the image covers the entire container */
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Center the image */
-  opacity: 0.1; /* Set the opacity to be very transparent */
+  height: 100%; 
+  /*background-image: ;  Replace with the correct path to your image */
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  opacity: 0.1; 
 }
 
 .container-2 p {
@@ -178,11 +179,11 @@ footer__container-1 p {
 /* #Cursor
 ================================================== */
   :root {--background-color: #222222;
-    --text-color: #ffff00; /* Yellow text color */
+    --text-color: #ffff00; 
     --border-color: #e6e6e6;
     --button-background-color: #333333;
     --button-text-color: #ffff00;
-      --cursor-color: white; /* Cursor color in dark mode */
+      --cursor-color: white; 
   }
 
 
@@ -196,7 +197,7 @@ footer__container-1 p {
   transition: background-color 0.3s ease;
 }
 
-/* Additional styles for cursor2 if needed */
+/* Additional styles for cursor 2 */
 .cursor2 {
   width: 1.25rem;
   height: 1.25rem;
@@ -270,7 +271,7 @@ box-shadow: 0 0 0 rgba(255, 255, 255, 0.2);
 
   .container {
     position: relative;
-    z-index: 1; /* Ensure this is higher than the moving image */
+    z-index: 1; 
     padding: 1.25rem;
     color: var(--text-color);
 }
@@ -297,8 +298,8 @@ box-shadow: 0 0 0 rgba(255, 255, 255, 0.2);
   background-image: none;
     border-radius: 0.625rem;
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-    flex: 1 1 calc(33.333% - 2.5rem); /* Adjust the width as needed */
-    max-width: calc(33.333% - 2.5rem); /* Adjust the width as needed */
+    flex: 1 1 calc(33.333% - 2.5rem);
+    max-width: calc(33.333% - 2.5rem); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -366,16 +367,39 @@ box-shadow: 0 0 0 rgba(255, 255, 255, 0.2);
   }
 }
 .box h3 {
-  opacity: 0; /* Start with hidden elements */
-  animation: fadeInUp 5s ease forwards; /* Apply the animation */
+  font-family: "Poetsen One", serif;
+  font-weight: 400;
+  font-style: normal;
+  opacity: 0; 
+  animation: fadeInUp 5s ease forwards; 
 } 
+.container__heading{padding: 4rem;
+  font-family: "Rubik Vinyl", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+}
 
 /* media queries*/
-/* For small devices (phones, 600px and down) */
-@media screen and (max-width: 680px) {
+/* For small devices (phones, 680px and down) */
+@media only screen and (max-width: 680px) {
   body {
-    font-size: 0.625rem;
+    font-size: 14px;
+  }
 
+  .container {
+    padding: 10px;
+  }
+
+  .box {
+    flex: 1 1 100%; 
+    max-width: 100%;
+  }
+
+  .footer__container-1 p {
+    font-size: 0.75rem; 
+  }
+}
   .container {
     padding: 0.625rem ;
     align-items: center;
@@ -389,25 +413,16 @@ box-shadow: 0 0 0 rgba(255, 255, 255, 0.2);
   }
   
   .container__heading {
-    font-size: 0.625rem;
+    font-size: 1.5rem;
     margin-bottom: 0.625rem;
   }
 
-  .box {
-    flex: 1 1 100%; /* Full width for small devices */
-    max-width: 100%;
-    padding: 0.625rem;
-  }
-
-  .footer__container-1 p {
-    font-size: 0.625rem; /* Reduce font size for small devices */
-  }
-}
+  
 
 /* For tablets in portrait mode and larger devices (600px and up) */
 @media only screen and (min-width: 680px) {
   body {
-    font-size:  2rem;
+    font-size:  18px;
   }
 
   .container {
@@ -415,12 +430,15 @@ box-shadow: 0 0 0 rgba(255, 255, 255, 0.2);
   }
 
   .box {
-    flex: 1 1 calc(50% - 20px); /* Two columns for tablets */
+    flex: 1 1 calc(50% - 20px);
     max-width: calc(50% - 20px);
   }
 
   .footer__container-1 p {
-    font-size: 1rem; /* Adjust font size for tablets */
+    font-size: 1rem; 
+  }
+  .container__heading{
+    font-size: 2rem;
   }
 }
 
@@ -435,12 +453,14 @@ box-shadow: 0 0 0 rgba(255, 255, 255, 0.2);
   }
 
   .box {
-    flex: 1 1 calc(33.333% - 20px); /* Three columns for desktops */
+    flex: 1 1 calc(33.333% - 20px); 
     max-width: calc(33.333% - 20px);
   }
 
   .footer__container-1 p {
-    font-size: 1.25rem; /* Adjust font size for desktops */
+    font-size: 1.25rem; 
+  }
+  .container__heading{
+font-size: 2.5rem;
   }
 } 
-}
